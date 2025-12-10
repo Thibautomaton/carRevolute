@@ -7,8 +7,8 @@ from Box2D.b2 import polygonShape, fixtureDef
 from Box2D import b2Filter
 
 class Box():
-    CATEGORY_BOX = 0x0001
-    MASK_BOX = 0xFFFF & ~0x0002
+    # CATEGORY_BOX = 0x0001
+    # MASK_BOX = 0xFFFF & ~0x0002
     def __init__(self, x_, y_, w_, h_, world):
         self.x = x_
         self.y = y_
@@ -38,7 +38,7 @@ class Box():
 
         f = (self.body.CreateFixture(fixture))
 
-        f.filter = b2Filter(categoryBits=0x0001, maskBits=0xFFFF & ~0x0002)
+        # f.filter = b2Filter(categoryBits=0x0001, maskBits=0xFFFF & ~0x0002)
 
     def display(self):
         color = (175, 175, 175)

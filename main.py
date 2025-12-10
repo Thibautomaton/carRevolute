@@ -52,6 +52,7 @@ while True:
         # car.whjd1.motorSpeed = 100
         car.rjd1.motorEnabled = True
 
+
     world.Step(STEP, 6, 2)
     clock.tick(TARGET_FPS)
     pygame.display.update()

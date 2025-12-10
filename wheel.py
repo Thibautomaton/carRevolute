@@ -6,8 +6,8 @@ from Box2D.b2 import circleShape, fixtureDef
 from Box2D import b2Filter
 
 class Wheel():
-    CATEGORY_WHEEL = 0x0002
-    MASK_WHEEL = 0xFFFF & ~0x0001
+    # CATEGORY_WHEEL = 0x0002
+    # MASK_WHEEL = 0xFFFF & ~0x0001
 
     def __init__(self, x_, y_, r_, world):
         self.x = x_
@@ -33,7 +33,7 @@ class Wheel():
 
         f = self.body.CreateFixture(fixture)
 
-        f.filter = b2Filter(categoryBits=0x0002, maskBits=0xFFFF & ~0x0001)
+        # f.filter = b2Filter(categoryBits=0x0002, maskBits=0xFFFF & ~0x0001)
 
 
     def display(self):
